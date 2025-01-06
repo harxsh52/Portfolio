@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  .typewriter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color: #b2acac;
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+    opacity: 1; /* Initially fully visible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-out transition */
+    overflow: hidden;
+  }
+  
+  /* Typewriter Text Animation */
+  .typewriter-text {
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-transform: uppercase;
+    width: 0; /* Initially hidden */
+    animation: typing 4s steps(30, end), blink 0.6s step-end infinite;
+  }
+  
+  /* Keyframes for Typing Animation */
+  @keyframes typing {
+    from {
+      width: 10;
+    }
+    to {
+      width: 275px;
+    }
+  }
+  
+  /* Keyframes for Blinking Cursor */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
