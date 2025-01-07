@@ -130,6 +130,7 @@
 .parent-container { /* Style the parent container */
   display: flex;
   justify-content: center; /* Center horizontally */
+  
   /* If you also want to center vertically: */
   align-items: center;
   opacity: 0.9;
@@ -289,7 +290,7 @@ box-sizing: border-box; /* Important for padding to be included in width */
   width: 900px;
   height: 250px;
   margin: 10px;
-  background: #ffffff;
+  background: #090000;
   border-radius: 20px;
   padding: 10px 0;
 }
@@ -539,7 +540,7 @@ body.dark-mode .progress {
   background-color: #b4b8b8;
 }
 body.dark-mode .img-slider{
-  background: #060000;
+  background: #ffffff;
 }
 body.dark-mode footer {
   background-color: #ffffff;
@@ -553,4 +554,28 @@ body.dark-mode .hire-me-button-1 {
 }
 body.dark-mode #theme-icon{
   color:white;
+}
+body.dark-mode .bg-white {
+  background-color: rgb(225, 216, 216); 
+  /* Invert background color */
+  border: 1px solid white;
+}
+body.dark-mode .bg-white:hover{
+  background-color: rgb(255, 253, 253);
+  color:rgb(0, 0, 0); /* Invert background color */
+}
+
+body.dark-mode .text-gray-700 {
+  color: #000303; /* Lighter text color for readability */
+}
+
+body.dark-mode .text-black-200 {
+  color: #f10505; /* Lighter link color for dark mode */
+}
+
+body.dark-mode h1 {
+  color: white; /* Change title text to white */
+}
+body.dark-mode #aboutSection{
+  border: 1px solid white;
 }
