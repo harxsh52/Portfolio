@@ -97,3 +97,19 @@ var repeat = function(activeClass){
     repeater();
 }
 repeat();
+const toggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+const themeIcon = document.getElementById("theme-icon");
+
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+  } else {
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  }
+});
+
