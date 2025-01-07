@@ -8,21 +8,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  backdrop-filter: blur(10px);
-  background-size: cover;
-  background-position: fixed;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  color:rgb(7, 6, 6);
-  
-}
+
+
 
 /* Navbar Styles */
+#theme-icon{
+  color: rgb(240, 81, 41);
+  padding:10px;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -42,7 +35,6 @@ body {
   height: 50px; /* Adjust to fit your needs */
   width: auto;
   margin-right: 10px;
-  mix-blend-mode: multiply;
 }
 
 
@@ -232,8 +224,8 @@ box-sizing: border-box; /* Important for padding to be included in width */
 .hire-me-button {
   display: inline-block; /* Make it behave like a block element but stay inline */
   padding: 10px 20px;
-  background-color: #eef3f7; /* Example blue color */
-  color: rgb(6, 0, 0);
+  background-color: #000406; /* Example blue color */
+  color: rgb(251, 249, 249);
   text-decoration: none;
   border-radius: 5px;
   border: none;
@@ -244,6 +236,7 @@ box-sizing: border-box; /* Important for padding to be included in width */
 .hire-me-button:hover {
   background-color: #000408; /* Darker blue on hover */
   color: #f4efef;
+  transform: scale(1.1);
 }
 .resume-me-button {
   display: inline-block; /* Make it behave like a block element but stay inline */
@@ -258,8 +251,9 @@ box-sizing: border-box; /* Important for padding to be included in width */
 }
 
 .resume-me-button:hover {
-  background-color: #f8f8f9; /* Darker blue on hover */
-  color: #040000;
+  background-color: #000000; /* Darker blue on hover */
+  color: #f7f2f2;
+  transform: scale(1.1);
 }
 .resume-hire{
   display: flex;
@@ -295,7 +289,7 @@ box-sizing: border-box; /* Important for padding to be included in width */
   width: 900px;
   height: 250px;
   margin: 10px;
-  background: #d3d3d3;
+  background: #ffffff;
   border-radius: 20px;
   padding: 10px 0;
 }
@@ -427,12 +421,6 @@ box-sizing: border-box; /* Important for padding to be included in width */
     bottom: 10px;
   }
 }
-footer {
-  background-color: #030000;
-  color: white;
-  padding: 20px;
-  text-align: center; /* Center text by default */
-}
 
 footer .container {
   max-width: 960px;
@@ -442,8 +430,14 @@ footer .container {
   justify-content: center; /* Center content horizontally */
   align-items: center;
 }
+footer {
+  background-color: #030000;
+  color: white;
+  padding: 20px;
+  text-align: center; /* Center text by default */
+}
 
-.hire-me-button {
+.hire-me-button-1 {
   display: inline-block;
   padding: 10px 20px;
   background-color: #f6f8fb;
@@ -465,4 +459,98 @@ footer .container {
   padding: 20px;
   text-align: center;
   font-family: "Inconsolata", serif;
+}
+:root {
+  --background-light: #ffffff;
+  --background-dark: #000000;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+
+body.dark-mode .logo{
+  filter: invert(1);
+}
+body.dark-mode .navbar{
+  background-color: #000;
+}
+body.dark-mode .nav-links{
+  color: white;
+}
+body.dark-mode .nav-link{
+  color: white;
+}
+body.dark-mode .nav-link:hover{
+  color: red;
+}
+body.dark-mode .first{
+  color: white;
+}
+body.dark-mode .third{
+  border:1px solid white;
+}
+body.dark-mode .second a.github:hover{
+  color: #fbf6f6;
+}
+body.dark-mode .hire-me-button {
+  background-color: #eef3f7; /* Example blue color */
+  color: rgb(6, 0, 0);
+  
+}
+
+body.dark-mode .hire-me-button:hover {
+  background-color: #f8fafc; /* Darker blue on hover */
+  color: #000000;
+}
+body.dark-mode .resume-me-button {
+  background-color: #fbfbfb; /* Example blue color */
+  color: rgb(6, 0, 0);
+}
+
+body.dark-mode .resume-me-button:hover {
+  background-color: #f8f8f9; /* Darker blue on hover */
+  color: #040000;
+}
+body.dark-mode .skill {
+  border: 1px solid #faf6f6; /* Add a subtle border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Add some padding inside skill boxes */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+body.dark-mode .progress-bar {
+  background-color: #fbf9f9;
+}
+
+body.dark-mode .progress {
+  background-color: #b4b8b8;
+}
+body.dark-mode .img-slider{
+  background: #060000;
+}
+body.dark-mode footer {
+  background-color: #ffffff;
+  color: rgb(9, 0, 0);
+}
+
+body.dark-mode .hire-me-button-1 {
+
+  color: rgb(244, 241, 241);
+  background-color: #000;
+}
+body.dark-mode #theme-icon{
+  color:white;
 }
